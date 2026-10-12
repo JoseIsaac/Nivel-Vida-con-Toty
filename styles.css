@@ -189,7 +189,7 @@ p {
 .section-heading-row h2,
 .roadmap-copy h2,
 .support-card h2,
-.comments-card h3 {
+.contact-card h3 {
   font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: -2.5px;
@@ -913,7 +913,7 @@ p {
 }
 
 .support-card,
-.comments-card {
+.contact-card {
   position: relative;
   min-height: 388px;
   padding: 32px 34px;
@@ -925,7 +925,7 @@ p {
 }
 
 .support-card > .eyebrow,
-.comments-card > .eyebrow {
+.contact-card > .eyebrow {
   position: relative;
   z-index: 1;
   font-size: 8px;
@@ -991,7 +991,7 @@ p {
   letter-spacing: 0.3px;
 }
 
-.comments-card {
+.contact-card {
   background: #405464;
   color: #fbfaf6;
 }
@@ -1013,55 +1013,75 @@ p {
   font-size: 15px;
 }
 
-.comments-card .coming-soon {
+.contact-card .coming-soon {
   color: #d0dcc5;
   font-size: 7px;
 }
 
-.comments-card > .eyebrow {
+.contact-card > .eyebrow {
   color: #d0dcc5;
 }
 
-.comments-card h3 {
+.contact-card h3 {
   position: relative;
   z-index: 1;
   margin: 8px 0 9px;
-  font-size: 34px;
+  font-size: 27px;
   line-height: 1.2;
   letter-spacing: -1px;
 }
 
-.comments-card > p:not(.eyebrow) {
+.contact-card > p:not(.eyebrow) {
   max-width: 355px;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   color: rgba(251, 250, 246, 0.76);
   font-size: 10px;
   line-height: 1.8;
 }
 
-.comment-placeholder {
-  display: flex;
-  min-height: 39px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 11px;
-  border: 1px solid rgba(251, 250, 246, 0.27);
-  color: rgba(251, 250, 246, 0.52);
+.contact-email {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #f4c49b;
+  font-size: 12px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-decoration-color: rgba(244, 196, 155, 0.55);
+  text-underline-offset: 3px;
+}
+
+.contact-notes {
+  display: grid;
+  gap: 5px;
+  margin: 5px 0 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-notes li {
+  padding-left: 13px;
+  color: rgba(251, 250, 246, 0.82);
   font-size: 9px;
+  line-height: 1.6;
 }
 
-.comment-send {
+.contact-notes li::before {
+  margin-left: -13px;
   color: #d0dcc5;
-  font-size: 15px;
+  content: "•";
+  font-size: 11px;
 }
 
-.comments-note {
-  display: block;
-  margin-top: 9px;
-  color: #d0dcc5;
-  font-size: 7px;
+.contact-card .contact-closing {
+  margin: 0;
+  color: #e4b9e5;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.8px;
+}
+
+.contact-email:focus-visible {
+  outline-color: #f4c49b;
 }
 
 .site-footer {
@@ -1155,7 +1175,7 @@ p {
   }
 
   .support-card,
-  .comments-card {
+  .contact-card {
     padding-right: 26px;
     padding-left: 26px;
   }
@@ -1398,7 +1418,7 @@ p {
   }
 
   .support-card,
-  .comments-card {
+  .contact-card {
     min-height: 0;
     padding: 27px 23px;
   }
@@ -1407,8 +1427,8 @@ p {
     font-size: 35px;
   }
 
-  .comments-card h3 {
-    font-size: 32px;
+  .contact-card h3 {
+    font-size: 27px;
   }
 
   .comments-heading {
