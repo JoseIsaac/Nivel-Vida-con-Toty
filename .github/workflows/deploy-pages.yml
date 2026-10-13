@@ -31,8 +31,10 @@ jobs:
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
-          include-hidden-files: false
+          path: |
+            ./index.html
+            ./styles.css
+            ./assets/
       - name: Deploy site
         id: deployment
         uses: actions/deploy-pages@v4
