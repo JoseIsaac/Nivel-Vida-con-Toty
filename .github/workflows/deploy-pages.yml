@@ -28,13 +28,15 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           enablement: true
+      - name: Prepare site files
+        run: |
+          mkdir -p _site/assets
+          cp index.html styles.css _site/
+          cp assets/toty-avatar.png _site/assets/
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: |
-            ./index.html
-            ./styles.css
-            ./assets/
+          path: _site
       - name: Deploy site
         id: deployment
         uses: actions/deploy-pages@v4
